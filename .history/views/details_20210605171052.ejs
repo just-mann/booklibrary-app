@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/Header') %>
+<body>
+    <%- include('./partials/Navbar') %>
+      <div class="container py-5">
+        <h3>Book Detail</h3>
+        <h4><%= singleBook.title %></h4>
+        <h4><%= singleBook.author %></h4>
+        <a href="#">Delete</a>
+      </div>
+    <%- include('./partials/Footer') %>
+</body>
+</html>

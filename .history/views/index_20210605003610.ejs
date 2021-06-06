@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/Header') %>
+<body>
+    <%- include('./partials/Navbar') %>
+      <div class="container py-5"
+        data-aos="fade-up"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="30"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+      >
+        <form action="/books" method="POST">
+          <h4>Add Book</h4>
+            <div class="my-2">
+              <input class="px-3 py-1 title" type="text" name="title" id="title" placeholder="Enter book title">
+            </div>
+            <div class="my-2">
+              <input class="px-3 py-1 author" type="text" name="author" id="author" placeholder="Enter author">
+            </div>
+            <div class="my-2">
+              <input class="px-3 py-1 isRead" type="checkbox" name="isRead" id="isRead">
+              Did you read?
+            </div>
+            <div class="my-2">
+              <input class="px-3 py-1 submitBtn" type="submit" value="Add">
+            </div>
+        </form>
+      </div>
+    <%- include('./partials/Footer') %>
+</body>
+</html>

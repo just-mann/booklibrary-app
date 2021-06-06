@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/Header') %>
+<body>
+    <%- include('./partials/Navbar') %>
+      <div class="container py-5">
+        <h3>Book Detail</h3>
+        <h4>Title: <%= singleBook.title %></h4>
+        <h4>Author: <%= singleBook.author %></h4>
+        <a class="btn btn-danger" data-book="<%= singleBook._id">Delete</a>
+      </div>
+    <%- include('./partials/Footer') %>
+</body>
+</html>

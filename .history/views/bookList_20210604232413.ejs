@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/Header') %>
+    <body>
+        <%- include('./partials/Navbar') %>
+        <div class="container">
+            <h3>My Book List</h3>
+            <div class="container-fluid">
+                <% myList.forEach(list => {%>
+                    <% if (list) { %>
+                        <ol class="list bg-success p-2 px-3 my-3 mb-4 text-light">
+                            <li>
+                                <div>Title: <%= list.title %></div>
+                                <div>Author: <%= list.author %></div> 
+                                <div>Did you read: <%= list.isRead %></div>
+                            </li>
+                        </ol>
+                    <% } else { %>
+                        <div class="text-danger">
+                            <h3>You have no book in your list</h3>
+                        </div>
+                    <% } %>
+                <% }) %>
+            </div>
+        </div>
+        <%- include('./partials/Footer') %>
+    </body>
+</html>

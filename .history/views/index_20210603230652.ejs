@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/Header') %>
+<body>
+    <div class="container-fluid">
+      <%- include('./partials/Navbar') %>
+      <h3>Home Page</h3>
+      <div class="container">
+        <form action="">
+          <div class="">
+            <input type="text" name="title" id="title" placeholder="Enter book title">
+          </div>
+          <div>
+            <input type="text" name="author" id="author" placeholder="Enter author">
+          </div>
+          <div>
+            <input type="checkbox" name="isRead" id="isRead">
+          </div>
+          <div>
+            <button>Add Book</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <%- include('./partials/Footer') %>
+</body>
+</html>

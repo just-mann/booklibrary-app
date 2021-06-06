@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/Header') %>
+<body>
+    <%- include('./partials/Navbar') %>
+      <div class="container py-5">
+        <h3>Book Detail</h3>
+        <h4>Title: <%= singleBook.title %></h4>
+        <h4>Author: <%= singleBook.author %></h4>
+        <a class="btn btn-danger deleteBook" data-doc="<%= singleBook._id %>">Delete</a>
+      </div>
+    <%- include('./partials/Footer') %>
+    
+    <script>
+        let deleteBtn = document.querySelector('.deleteBook');
+        deleteBtn.addEventListener('click', (e) => {
+            console.log('Button clicked');
+            fetch(`/booklist/deleteBtn.${dataset.doc}`)
+                .then((result) => result.json())
+                .then(data => console.log(data))
+                .catch(err => console.log(err));
+        })
+    </script>
+</body>
+</html>

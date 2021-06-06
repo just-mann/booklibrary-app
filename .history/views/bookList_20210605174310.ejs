@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/Header') %>
+    <body>
+        <%- include('./partials/Navbar') %>
+        <div class="container py-4 mt-2">
+            <h3>My Book List</h3>
+            <div class="container row px-0">
+                <% if (myList.length > 0) { %>
+                    <% myList.forEach(list => { %>
+                        <!-- <button class="btn btn-danger">Clear List</button> -->
+                        <!-- <a href="/booklist/<%= list._id %>" class="single col-md-4"> -->
+                            <div class="list p-4 my-3 mx-auto mb-4 col-md-4">
+                                <div>Title: <%= list.title %></div>
+                                <div>Author: <%= list.author %></div> 
+                                <div>Did you read: 
+                                    <% if (list.isRead) { %>
+                                        Yes
+                                    <% } else { %>
+                                        No
+                                    <% } %>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="/booklist/<%= list._id %>" class="btn btn-danger blogDelete">Delete</a>
+                                    <a href="/booklist/<%= list._id %>" class="float-right btn btn-success">Read More</a>
+                                </div>
+                                
+                            </div>
+                        <!-- </a> -->
+                    <% }) %>
+                <% } else { %>
+                    <div class="text-danger">
+                        <h3>You have no book in your list</h3>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+        <%- include('./partials/Footer') %>
+    </body>
+</html>

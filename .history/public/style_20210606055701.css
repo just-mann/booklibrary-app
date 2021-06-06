@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: #114f74;
+    padding: 10px 0px;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .container .logo h3 {
+    color: #ffffff;
+    font-weight: 350;
+}
+
+nav .container .nav__links {
+    color: #ffffff;
+}
+
+nav .container .nav__links a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 10px 0px;
+    margin: 0px 10px;
+    font-weight: 300;
+}
+
+.nav__links a:hover {
+    color: red;
+}
+
+.listDiv {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.myList {
+    max-width: 450px;
+    min-width: 350px;
+    margin: 0px 15px;
+    background-color: #e2e2e2;
+    border-left: 15px solid #41a1b9;
+    opacity: 0.9;
+    transition: opacity 0.6s;
+}
+
+.list:hover {
+    opacity: 1;
+}
+
+
+/* Home Page */
+.home {
+    height: 83vh;
+}
+
+.home .homeDiv, .contact .contactDiv {
+    /* background: yellow; */
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+
+/* Book List Page */
+.bookList {
+    min-height: 81.3vh;
+}
+
+
+
+
+
+
+/* details page */
+.details {
+    height: 81.5vh;
+}
+
+
+
+.bookSummary {
+    max-width: 100%;
+}
+
+
+
+/* Contact Page */
+.contact {
+    height: 82.5vh;
+}
+
+.submitBtn {
+    background-color: #114f74;
+    color: white;
+    border: none;
+    font-weight: 500;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.6s;
+}
+
+.submitBtn:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+/* Footer */
+footer .container h4 a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer .container h3 a:hover {
+    text-decoration: none;
+}
+
+
+
+
+
+@media screen and (max-width: 700px){
+    .bookList .myList {
+        margin: 0 auto;
+    }
+
+    body {
+        /* background: yellow; */
+    }
+
+    nav .container .nav__links {
+        display: none;
+    }
+}

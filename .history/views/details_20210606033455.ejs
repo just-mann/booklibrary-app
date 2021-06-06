@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/Header') %>
+<body>
+    <%- include('./partials/Navbar') %>
+      <div class="container py-5">
+        <h3>Book Detail</h3>
+        <h4>Title: <%= singleBook.title %></h4>
+        <h4>Author: <%= singleBook.author %></h4>
+        <a class="btn btn-danger deleteBook" data-doc="<%= singleBook._id %>">Delete</a>
+      </div>
+    <%- include('./partials/Footer') %>
+    
+    <script>
+        console.log('js File Connected...')
+
+        const deleteBtn = document.querySelector('a.deleteBook');
+
+        deleteBtn.addEventListener('click', (e) => {
+            
+            const endpoint = `/booklist/${deleteBtn.dataset.doc}`;
+
+            fetch(endpoint, {
+                method: 'DELETE'
+            })
+                .then((response) => response.json())
+                .then(data => window.location.href = data.redirect)
+                .catch(err => console.log(err));
+        })
+    </script>
+</body>
+</html>

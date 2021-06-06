@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/Header') %>
+<body>
+    <%- include('./partials/Navbar') %>
+      <div class="container">
+      <h3>Home Page</h3>
+        <form action="/books" method="POST">
+          <h4>Add Book</h4>
+            <input class="px-3 py-1 title" type="text" name="title" id="title" placeholder="Enter book title">
+            <input class="px-3 py-1 author" type="text" name="author" id="author" placeholder="Enter author">
+            <input class="px-3 py-1 isRead" type="checkbox" name="isRead" id="isRead">
+            Did you read?
+            <button class="px-3 py-1 addBookBtn">Add Book</button>
+        </form>
+      </div>
+    <%- include('./partials/Footer') %>
+</body>
+</html>

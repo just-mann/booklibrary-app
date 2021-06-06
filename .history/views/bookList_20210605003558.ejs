@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/Header') %>
+    <body>
+        <%- include('./partials/Navbar') %>
+        <div class="container py-5 mt-2">
+            <h3>My Book List</h3>
+            <div class="container" 
+                data-aos="fade-up"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="30"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+            >
+                <% myList.forEach(list => { %>
+                    <% if (list) { %>
+                        <div class="list p-4 my-3 mb-4">
+                            <div>Title: <%= list.title %></div>
+                            <div>Author: <%= list.author %></div> 
+                            <div>Did you read: 
+                                <% if (list.isRead) { %>
+                                    Yes
+                                <% } else { %>
+                                    No
+                                <% } %>
+                            </div>
+                        </div>
+                    <% } else { %>
+                        <div class="text-danger">
+                            <h3>You have no book in your list</h3>
+                        </div>
+                    <% } %>
+                <% }) %>
+            </div>
+        </div>
+        <%- include('./partials/Footer') %>
+    </body>
+</html>

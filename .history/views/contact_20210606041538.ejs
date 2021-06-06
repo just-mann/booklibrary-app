@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/Header') %>
+<body>
+    <%- include('./partials/Navbar') %>
+    <div class="container py-3 contact">
+        <div class="w-50 p-5 px-0">
+            <form class="px-0">
+              <h2>Contact Me</h2>
+                <div class="my-3">
+                  <input class="px-3 py-2 title w-100" type="text" name="title" id="title" placeholder="Enter your name">
+                </div>
+                <div class="my-3">
+                  <input class="px-3 py-2 author w-100" type="text" name="author" id="author" placeholder="Enter your email">
+                </div>
+                <div class="my-3">
+                  <textarea class="px-3 py-2 w-100" name="message" id="" cols="30" rows="7" placeholder="Leave a message"></textarea>
+                </div>
+                <div class="my-3">
+                  <input class="px-3 py-1 submitBtn" type="submit" value="Send Message">
+                </div>
+            </form>
+          </div>
+    </div>
+    <%- include('./partials/Footer') %>
+</body>
+</html>
