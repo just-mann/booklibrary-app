@@ -50,7 +50,7 @@ nav .container .nav__links a {
 
 .resNav {
     background: inherit;
-    height: auto;
+    height: 50vh;
     width: 100%;
     position: fixed;
     top: 43px;
@@ -58,11 +58,6 @@ nav .container .nav__links a {
     margin: 12px 0px 0px 0px;
     z-index: 100;
     display: none;
-}
-
-.resNav.show {
-    display: block;
-    transition: 0.6s;
 }
 
 .resNav .res__links a {
@@ -99,53 +94,78 @@ nav .container .nav__links a {
 
 
 .menuIcon {
-    position: relative;
     color: #ffffff;
     display: none;
     cursor: pointer;
+    /* transition: transform 0.6s; */
 }
 
 .menuIcon:hover {
     cursor: pointer;
+    /* transform: scale(1.02); */
 }
 
 .menuIcon .bar {
+    /* position: absolute; */
     width: 30px;
     height: 4px;
     background: white;
-    border-radius: 3px;
+    margin: 5px 0px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
 }
 
-.menuIcon .bar::before,
-.menuIcon .bar::after {
-    content: " ";
-    position: absolute;
-    height: 4px;
-    width: 30px;
-    background: white;
-    border-radius: 3px;
-    transform: translateY(5px);
+.bar1 {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center; 
 }
 
-.menuIcon .bar::before {
-    transform: translateY(-10px);
+.bar2 {
+    top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
 }
 
-.menuIcon .bar::after {
-    transform: translateY(10px);
+.bar3 {
+    top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
 }
 
-.menuIcon.open .bar {
-    transform: translateX(-40px);
-    background: transparent;
+.menuIcon.open .bar1 {
+    -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 39px;
+  left: 8px;
 }
 
-.menuIcon.open .bar::before {
-    transform: rotate(45deg) translate(30px, -30px);
+.menuIcon.open .bar2 {
+    width: 0%;
+    opacity: 0;
 }
 
-.menuIcon.open .bar::after {
-    transform: rotate(-45deg) translate(30px, 30px);
+.menuIcon.open .bar3 {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 39px;
+    left: 8px;
 }
 
 
@@ -182,12 +202,12 @@ nav .container .nav__links a {
 
 /* Book List Page */
 .bookList {
-    min-height: 100vh;
+    min-height: 82vh;
 }
 
 /* details page */
 .details {
-    min-height: 92vh;
+    height: 83vh;
 }
 
 .bookSummary {
@@ -196,7 +216,7 @@ nav .container .nav__links a {
 
 /* Contact Page */
 .contact {
-    height: 100vh;
+    height: 83vh;
 }
 
 .submitBtn {
@@ -236,19 +256,5 @@ footer .container h3 a:hover {
 
     .menuIcon {
         display: block;
-    }
-
-    /* details page */
-    .details {
-        min-height: 100vh;
-    }
-
-    .home {
-        min-height: 100vh;
-    }
-
-    /* Book List Page */
-    .bookList {
-        height: auto;
     }
 }

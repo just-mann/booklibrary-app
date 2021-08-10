@@ -50,7 +50,7 @@ nav .container .nav__links a {
 
 .resNav {
     background: inherit;
-    height: auto;
+    height: 50vh;
     width: 100%;
     position: fixed;
     top: 43px;
@@ -103,6 +103,8 @@ nav .container .nav__links a {
     color: #ffffff;
     display: none;
     cursor: pointer;
+    min-height: 20px;
+    background: rgb(5, 59, 23);
 }
 
 .menuIcon:hover {
@@ -182,12 +184,12 @@ nav .container .nav__links a {
 
 /* Book List Page */
 .bookList {
-    min-height: 100vh;
+    min-height: 82vh;
 }
 
 /* details page */
 .details {
-    min-height: 92vh;
+    height: 83vh;
 }
 
 .bookSummary {
@@ -196,7 +198,7 @@ nav .container .nav__links a {
 
 /* Contact Page */
 .contact {
-    height: 100vh;
+    height: 83vh;
 }
 
 .submitBtn {
@@ -236,19 +238,5 @@ footer .container h3 a:hover {
 
     .menuIcon {
         display: block;
-    }
-
-    /* details page */
-    .details {
-        min-height: 100vh;
-    }
-
-    .home {
-        min-height: 100vh;
-    }
-
-    /* Book List Page */
-    .bookList {
-        height: auto;
     }
 }

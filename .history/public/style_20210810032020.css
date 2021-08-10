@@ -50,7 +50,7 @@ nav .container .nav__links a {
 
 .resNav {
     background: inherit;
-    height: auto;
+    height: 50vh;
     width: 100%;
     position: fixed;
     top: 43px;
@@ -196,7 +196,7 @@ nav .container .nav__links a {
 
 /* Contact Page */
 .contact {
-    height: 100vh;
+    height: 83vh;
 }
 
 .submitBtn {
@@ -249,6 +249,6 @@ footer .container h3 a:hover {
 
     /* Book List Page */
     .bookList {
-        height: auto;
+        min-height: auto;
     }
 }

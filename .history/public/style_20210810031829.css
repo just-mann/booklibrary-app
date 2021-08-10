@@ -50,7 +50,7 @@ nav .container .nav__links a {
 
 .resNav {
     background: inherit;
-    height: auto;
+    height: 50vh;
     width: 100%;
     position: fixed;
     top: 43px;
@@ -182,7 +182,7 @@ nav .container .nav__links a {
 
 /* Book List Page */
 .bookList {
-    min-height: 100vh;
+    min-height: 82vh;
 }
 
 /* details page */
@@ -196,7 +196,7 @@ nav .container .nav__links a {
 
 /* Contact Page */
 .contact {
-    height: 100vh;
+    height: 83vh;
 }
 
 .submitBtn {
@@ -240,15 +240,6 @@ footer .container h3 a:hover {
 
     /* details page */
     .details {
-        min-height: 100vh;
-    }
-
-    .home {
-        min-height: 100vh;
-    }
-
-    /* Book List Page */
-    .bookList {
-        height: auto;
+        min-height: auto;
     }
 }

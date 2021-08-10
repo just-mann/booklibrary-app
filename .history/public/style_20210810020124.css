@@ -50,7 +50,7 @@ nav .container .nav__links a {
 
 .resNav {
     background: inherit;
-    height: auto;
+    height: 50vh;
     width: 100%;
     position: fixed;
     top: 43px;
@@ -99,55 +99,33 @@ nav .container .nav__links a {
 
 
 .menuIcon {
-    position: relative;
     color: #ffffff;
     display: none;
     cursor: pointer;
+    /* transition: transform 0.6s; */
+}
+
+.menuIcon.open .bar1 {
+    transform: rotate(120deg);
+}
+
+.menuIcon.open .bar3 {
+    transform: rotate(120deg);
 }
 
 .menuIcon:hover {
     cursor: pointer;
+    /* transform: scale(1.02); */
 }
 
 .menuIcon .bar {
-    width: 30px;
+    /* position: absolute; */
+    width: 33px;
     height: 4px;
     background: white;
+    margin: 5px 0px;
     border-radius: 3px;
 }
-
-.menuIcon .bar::before,
-.menuIcon .bar::after {
-    content: " ";
-    position: absolute;
-    height: 4px;
-    width: 30px;
-    background: white;
-    border-radius: 3px;
-    transform: translateY(5px);
-}
-
-.menuIcon .bar::before {
-    transform: translateY(-10px);
-}
-
-.menuIcon .bar::after {
-    transform: translateY(10px);
-}
-
-.menuIcon.open .bar {
-    transform: translateX(-40px);
-    background: transparent;
-}
-
-.menuIcon.open .bar::before {
-    transform: rotate(45deg) translate(30px, -30px);
-}
-
-.menuIcon.open .bar::after {
-    transform: rotate(-45deg) translate(30px, 30px);
-}
-
 
 .listDiv {
     display: flex;
@@ -182,12 +160,12 @@ nav .container .nav__links a {
 
 /* Book List Page */
 .bookList {
-    min-height: 100vh;
+    min-height: 82vh;
 }
 
 /* details page */
 .details {
-    min-height: 92vh;
+    height: 83vh;
 }
 
 .bookSummary {
@@ -196,7 +174,7 @@ nav .container .nav__links a {
 
 /* Contact Page */
 .contact {
-    height: 100vh;
+    height: 83vh;
 }
 
 .submitBtn {
@@ -236,19 +214,5 @@ footer .container h3 a:hover {
 
     .menuIcon {
         display: block;
-    }
-
-    /* details page */
-    .details {
-        min-height: 100vh;
-    }
-
-    .home {
-        min-height: 100vh;
-    }
-
-    /* Book List Page */
-    .bookList {
-        height: auto;
     }
 }

@@ -50,7 +50,7 @@ nav .container .nav__links a {
 
 .resNav {
     background: inherit;
-    height: auto;
+    height: 40vh;
     width: 100%;
     position: fixed;
     top: 43px;
